@@ -5,7 +5,6 @@
 
 [![https://github.com/vroomfondel/mqttstuff/raw/main/Gemini_Generated_Image_mqttstuff_wjpr8gwjpr8gwjpr_250x250.png](https://github.com/vroomfondel/mqttstuff/raw/main/Gemini_Generated_Image_mqttstuff_wjpr8gwjpr8gwjpr_250x250.png)](https://github.com/vroomfondel/mqttstuff)
 
-
 # MQTTStuff
 
 Lightweight helper utilities for working with MQTT via Paho, with convenient wrappers for:

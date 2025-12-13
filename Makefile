@@ -13,6 +13,9 @@ help:
 	@printf "\ncommit-checks\n\trun pre-commit checks on all files\n"
 	@printf "\pypibuild \n\tbuild image package for pypi\n"
 	@printf "\pypipush \n\push package to pypi\n"
+	@printf "\nbuild \n\tbuild docker image\n"
+	@printf "\ndstart \n\tlaunch \"app\" in docker\n"
+
 
 
 
@@ -87,6 +90,13 @@ dist/.touchfile_push: dist/mqttstuff-$(VERSION).tar.gz dist/mqttstuff-$(VERSION)
 	@touch dist/.touchfile_push
 
 pypipush: venv dist/.touchfile_push
+
+build: venv
+	./build.sh
+
+dstart:
+	# map config.local.yaml from current workdirectory into container
+	docker run --network=host -it --rm --name mqttstuffephemeral -v $(pwd)/config.local.yaml:/app/config.local.yaml xomoxcc/mqttstuff:latest /bin/bash
 
 # From https://hatch.pypa.io/latest/publish/#authentication
 # HATCH_INDEX_USER and HATCH_INDEX_AUTH
