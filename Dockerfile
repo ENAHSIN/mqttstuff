@@ -39,8 +39,8 @@ RUN pip3 install --no-cache-dir --upgrade -r /requirements.txt
 #COPY --chown=${UID}:${GID} requirements-dev.txt /
 #RUN pip3 install --no-cache-dir --upgrade -r /requirements-dev.txt
 
-COPY --chown=${UID}:${GID} mqttstuff /app/
-COPY --chown=${UID}:${GID} mqttcommander /app/
+COPY --chown=${UID}:${GID} mqttstuff /app/mqttstuff
+COPY --chown=${UID}:${GID} mqttcommander /app/mqttcommander
 
 COPY --chown=${UID}:${GID} main.py config.py config.yaml Helper.py README.md /app/
 
