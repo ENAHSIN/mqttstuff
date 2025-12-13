@@ -297,13 +297,19 @@ docker run --rm -it mqttstuff:local \
 
 Helpful `Makefile` targets:
 
-- `make install` – create venv and install dev requirements
+- `make help` – list available targets with short descriptions
+- `make install` – create virtualenv and install development requirements
+- `make venv` – ensure `.venv` exists and dev requirements are installed
 - `make tests` – run pytest
-- `make lint` – run Black
-- `make isort` – fix import order
-- `make tcheck` – run mypy on `scripts` and `mqttstuff`
-- `make pypibuild` – build sdists/wheels with Hatch to `dist/`
-- `make pypipush` – publish using Hatch (configure credentials first)
+- `make lint` – run Black code formatter
+- `make isort` – fix and check import order
+- `make tcheck` – run mypy type checks over `*.py`, `scripts/`, `mqttstuff/`, and `mqttcommander/`
+- `make commit-checks` – run pre-commit hooks on all files
+- `make prepare` – run tests and commit-checks (useful before committing/PRs)
+- `make pypibuild` – build sdist and wheel with Hatch into `dist/`
+- `make pypipush` – publish built artifacts with Hatch (configure credentials first)
+- `make build` – build the Docker image via `./build.sh`
+- `make dstart` – start ephemeral container (host network), mapping `config.local.yaml` into `/app`
 
 ## Testing
 
