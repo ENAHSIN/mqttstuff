@@ -36,8 +36,8 @@ USER ${UNAME}
 COPY --chown=${UID}:${GID} requirements.txt /
 RUN pip3 install --no-cache-dir --upgrade -r /requirements.txt
 
-COPY --chown=${UID}:${GID} requirements-dev.txt /
-RUN pip3 install --no-cache-dir --upgrade -r /requirements-dev.txt
+#COPY --chown=${UID}:${GID} requirements-dev.txt /
+#RUN pip3 install --no-cache-dir --upgrade -r /requirements-dev.txt
 
 COPY --chown=${UID}:${GID} mqttstuff /app/
 COPY --chown=${UID}:${GID} mqttcommander /app/
