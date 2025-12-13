@@ -1,0 +1,15 @@
+REDIS:
+  HOST: "127.0.0.1"
+  HOST_IN_CLUSTER: "redis.redis.svc.cluster.local"
+  PORT: 6379
+
+MQTT:
+  USERNAME: "mqttusernamechangeme"
+  PASSWORD: "mqttpasswordchangeme"
+  HOST: "mosquitto.mosquitto.svc.cluster.local"
+  PORT: 1883
+
+TELEGRAM:
+  BOT_TOKEN: "1234567890:AEIo_xLKiKooKolKU8jHUjIkOLkmnkHHHHz"
+  BOT_CHATID: "1234567890"
+  URL_PREFIX: "https://api.telegram.org/bot"
