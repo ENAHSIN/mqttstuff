@@ -61,11 +61,11 @@ commit-checks: .git/hooks/pre-commit
 
 prepare: tests commit-checks
 
-mqttstuff_SOURCES := mqttstuff/*.py
+mqttstuff_SOURCES := mqttstuff/*
 VENV_DEPS := requirements.txt requirements-dev.txt requirements-build.txt
 
 # VERSION := $(shell egrep -m 1 ^version pyproject.toml | tr -s ' ' | tr -d '"' | tr -d "'" | tr -d " " | cut -d'=' -f2)
-VERSION := $(shell $(venv_activated) > /dev/null 2>&1 && hatch version)
+VERSION := $(shell $(venv_activated) > /dev/null 2>&1 && hatch version 2>/dev/null || echo HATCH_NOT_FOUND)
 
 #echo:
 #	@printf "VERSION: $(VERSION)"
