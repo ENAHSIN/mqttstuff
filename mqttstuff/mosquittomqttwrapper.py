@@ -16,7 +16,9 @@ from pydantic import BaseModel
 _tz_berlin: datetime.tzinfo = pytz.timezone("Europe/Berlin")
 
 from loguru import logger
-logger.disable(__name__)
+
+# moved to __init__.py
+# logger.disable(__name__)
 
 logger.debug(f"{__name__} DEBUG")
 logger.info(f"{__name__} INFO")
@@ -558,37 +560,3 @@ class MQTTLastDataReader:
             return msgs
 
         return None
-
-
-def _main() -> None:
-    from config import settings
-    try:
-        from config import _EFFECTIVE_CONFIG  # type: ignore
-    except ImportError as ie:
-        logger.opt(exception=ie).error(ie)
-
-        _EFFECTIVE_CONFIG = {"mqtt_message_default_metadata": {"meta_data": "ON_THE_FLY"}}
-
-    mqttclient: MosquittoClientWrapper = MosquittoClientWrapper(
-        host=settings.mqtt.host,
-        port=settings.mqtt.port,
-        username=settings.mqtt.username,
-        password=settings.mqtt.password,
-    )
-
-    connected: bool = mqttclient.wait_for_connect_and_start_loop()
-    logger.debug(f"mqttclient.is_connected()={mqttclient.is_connected()} {connected=}")
-    # mqttclient.connect_and_start_loop_forever()
-
-    mqttclient.publish_one(
-        topic="somestuff/mqttstuff/TEST",
-        value=779,
-        created_at=datetime.datetime.now(tz=_tz_berlin),
-        metadata=_EFFECTIVE_CONFIG["mqtt_message_default_metadata"],  # type: ignore
-    )
-
-    mqttclient.disconnect()
-
-
-if __name__ == "__main__":
-    _main()
